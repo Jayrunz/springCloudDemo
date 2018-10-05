@@ -34,18 +34,7 @@ public class PostFilter extends ZuulFilter {
     public Object run() throws ZuulException {
         RequestContext context = RequestContext.getCurrentContext();
         HttpServletRequest request = context.getRequest();
-        log.info("请求返回 %s >>> %s", request.getMethod(), request.getRequestURL().toString());
-        Object token = request.getParameter("token");
-        if (token != null) {
-            context.setSendZuulResponse(false);
-            context.setResponseStatusCode(401);
-            try {
-                context.getResponse().getWriter().append(" token = " + token.toString());
-            } catch (IOException e) {
-                log.error("io error", e);
-            }
-            return null;
-        }
+        log.info("请求返回 " + request.getMethod() + " >>> " + request.getRequestURL().toString());
         return null;
     }
 }

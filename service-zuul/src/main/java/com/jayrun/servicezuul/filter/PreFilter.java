@@ -1,14 +1,16 @@
 package com.jayrun.servicezuul.filter;
 
-import com.netflix.zuul.ZuulFilter;
-import com.netflix.zuul.context.RequestContext;
-import com.netflix.zuul.exception.ZuulException;
+import java.io.IOException;
+
+import javax.servlet.http.HttpServletRequest;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-import javax.servlet.http.HttpServletRequest;
-import java.io.IOException;
+import com.netflix.zuul.ZuulFilter;
+import com.netflix.zuul.context.RequestContext;
+import com.netflix.zuul.exception.ZuulException;
 
 @Component
 public class PreFilter extends ZuulFilter {
@@ -34,7 +36,7 @@ public class PreFilter extends ZuulFilter {
     public Object run() throws ZuulException {
         RequestContext context = RequestContext.getCurrentContext();
         HttpServletRequest request = context.getRequest();
-        log.info("请求进入 %s >>> %s", request.getMethod(), request.getRequestURL().toString());
+        log.info("请求进入 " + request.getMethod() + " >>> " + request.getRequestURL().toString());
         Object token = request.getParameter("token");
         if (token == null) {
             log.warn("token is null");
