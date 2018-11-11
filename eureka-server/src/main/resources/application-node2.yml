@@ -2,8 +2,22 @@ server:
   port: 8771
 
 eureka:
+  server:
+    enable-self-preservation: false
   instance:
+    #hostname需要在host文件里添加
     hostname: eureka-server-ha-node2
+    #为true时 是将IP注册到Eureka Server上，如果不配置就是注册的hostname 默认false
+    prefer-ip-address: false
   client:
+    #表示是否将自己注册到Eureka Server  高可用部署需要
+    registerWithEureka: true
+    #表示是否从Eureka Server获取注册信息 高可用部署需要
+    fetchRegistry: true
     serviceUrl:
-      defaultZone: http://eureka-server-ha-node1:8761/eureka/
+      #注册到 node1，node2
+      defaultZone: http://eureka-server-ha-node1:8761/eureka/,http://eureka-server-ha-node2:8771/eureka/
+
+spring:
+  application:
+    name: eurka-server
