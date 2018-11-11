@@ -6,6 +6,11 @@ spring:
     name: config-client
   cloud:
     config:
+#      分支
       label: master
+#      profile
       profile: dev
+#      configServer的地址
       uri: http://localhost:8888/
+#      要获取的配置文件的名称前缀 多个逗号分隔  不配置时默认取client名称对应的文件
+      name: config-client,redis,smsTemplate

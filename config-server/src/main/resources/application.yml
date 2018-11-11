@@ -8,9 +8,12 @@ spring:
     config:
       server:
         git:
+#          git地址
           uri: https://github.com/Jayrunz/SpringCloudConfig/
+#          目录
           search-paths: configDemo
           username:
           password:
+#      分支
       label: master
 

@@ -17,8 +17,11 @@ public class ConfigClientApplication {
 	@Value("${name}")
 	private String name;
 
-	@Value("${democonfigclient.message}")
+	@Value("${sms.test}")
 	private String message;
+
+	@Value("${redis.ip}")
+	private String redisIp;
 
 	@GetMapping("/getName")
 	public String getOneConfig()throws Exception{
@@ -28,5 +31,10 @@ public class ConfigClientApplication {
 	@GetMapping("/getMessage")
 	public String getMessage()throws Exception{
 		return message;
+	}
+
+	@GetMapping("/getRedisIp")
+	public String getRedisIp()throws Exception{
+		return redisIp;
 	}
 }
