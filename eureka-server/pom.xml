@@ -16,7 +16,7 @@
 		<artifactId>demo</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-
+	<!--eureka-server-->
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
