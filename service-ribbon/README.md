@@ -1,0 +1,1 @@
+##基于ribbon+restTemplate的消费者
