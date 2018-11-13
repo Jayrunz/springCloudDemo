@@ -12,6 +12,7 @@ public class HelloServiceImpl implements HelloService {
     @Autowired
     private RestTemplate restTemplate;
 
+    //指定熔断时走的方法
     @HystrixCommand(fallbackMethod = "sayHiError")
     @Override
     public String sayHi(String name) {
