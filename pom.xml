@@ -26,6 +26,7 @@
         <module>config-server-ha</module>
         <module>config-client</module>
         <module>config-client-ha</module>
+        <module>config-admin</module>
     </modules>
 
     <properties>
