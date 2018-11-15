@@ -1,0 +1,23 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server-ha
+  cloud:
+    config:
+      server:
+        git:
+#          git地址
+          uri: https://github.com/Jayrunz/SpringCloudConfig.git
+#          git仓库下的子目录
+          search-paths: /configDemo
+          username: 
+          password: 
+#      分支
+      label: master
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
