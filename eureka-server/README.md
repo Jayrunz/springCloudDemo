@@ -1,4 +1,4 @@
-# eureka注册中心
+## eureka注册中心
 * 项目依赖   
     * 只需依赖pring-cloud-starter-netflix-eureka-server即可，见pom。
 * 配置文件    
