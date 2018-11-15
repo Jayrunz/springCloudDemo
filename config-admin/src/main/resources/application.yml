@@ -1,0 +1,22 @@
+server:
+  port: 12000
+
+spring:
+  application:
+    name: config-admin
+  datasource:
+    url: jdbc:mysql://localhost:3306/config-db
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+scca:
+  rest:
+    context-path: /xhr
+  ui:
+    use-embed-scca-rest-server: true
