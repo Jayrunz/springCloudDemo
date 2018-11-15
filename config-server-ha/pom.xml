@@ -33,6 +33,12 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
+		<!--集成scca git增强插件-->
+		<dependency>
+			<groupId>com.didispace</groupId>
+			<artifactId>scca-plugin-git</artifactId>
+			<version>1.1.1-RELEASE</version>
+		</dependency>
 		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
