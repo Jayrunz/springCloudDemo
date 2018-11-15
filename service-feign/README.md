@@ -7,4 +7,4 @@
     * 断路器依赖spring-cloud-starter-netflix-hystrix
     * 断路器监控 Hystrix Dashboard spring-cloud-starter-netflix-hystrix-dashboard
     * 断路器聚合监控 Hystrix Turbine spring-cloud-starter-netflix-turbine
-    * 集成链路追踪添加spring-cloud-starter-zipkin依赖
+    * 集成链路追踪添加spring-cloud-starter-zipkin依赖 http://localhost:9411/
