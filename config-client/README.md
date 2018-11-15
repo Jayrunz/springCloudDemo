@@ -1,4 +1,4 @@
-##基础版的config-client  
+#基础版的config-client  
 * 通过ip从config-server获取配置
 * 集成了消息总线spring Cloud Bus  
     * 消息总线依赖rabbitmq,需要安装。

@@ -1,4 +1,4 @@
-##高可用版的config-client  
+#高可用版的config-client  
 * 通过springCloud的服务注册发现从配置中心获取配置。
 * 集成了消息总线spring Cloud Bus  
     * 消息总线依赖rabbitmq,需要安装。
