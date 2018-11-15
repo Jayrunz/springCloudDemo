@@ -1,4 +1,4 @@
-#配置文件管理示例 config-admin 基于[spring-cloud-config-admin](https://github.com/dyc87112/spring-cloud-config-admin)
+# 配置文件管理示例 config-admin 基于[spring-cloud-config-admin](https://github.com/dyc87112/spring-cloud-config-admin)
 * 简介  
 spring-cloud-config虽然在spring-cloud架构中担任配置中心的角色,但是在配置的管理上比较欠缺,于是就有了[spring-cloud-config-admin](https://github.com/dyc87112/spring-cloud-config-admin)(SCCA)。  
 * 实现方案  
